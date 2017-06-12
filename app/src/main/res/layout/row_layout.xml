@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_row_hight"
+    android:layout_marginBottom="@dimen/margin_0.5dp"
+    android:background="@color/colorRowBgn"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_weight="1.8"
+        android:layout_marginLeft="@dimen/margin_12dp">
+
+        <TextView
+            android:id="@+id/textViewCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:textColor="@color/colorTextPrice"
+            android:textSize="@dimen/text_row_price"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRouble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewHours"
+            android:layout_marginStart="@dimen/margin_2dp"
+            android:layout_toEndOf="@id/textViewCost"
+            android:text="@string/symbol_ruble_Java"
+            android:textColor="@color/colorTextPrice"
+            android:textSize="@dimen/text_row_rouble_java"
+            android:layout_marginLeft="@dimen/margin_2dp"
+            android:layout_toRightOf="@id/textViewCost"/>
+
+
+        <TextView
+            android:id="@+id/textViewHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCost"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/margin_2dp"
+            android:textColor="@color/colorTextHours"
+            android:textSize="@dimen/text_infowindow_address" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_shell"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_8dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/margin_12dp">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:textColor="@color/colorGasName"
+            android:textSize="@dimen/text_row_price" />
+
+
+        <TextView
+            android:id="@+id/textViewAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_marginTop="@dimen/margin_2dp"
+            android:textColor="@color/colorTextAddress"
+            android:textSize="@dimen/text_row_rouble_java" />
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:background="@drawable/ic_bp"
+            android:layout_marginRight="@dimen/margin_12dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_test_distance"
+                    android:textColor="@color/colorTextDistance"
+                    android:textSize="@dimen/text_row_rouble_java"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_2dp"
+                    android:text="@string/text_km"
+                    android:textColor="@color/colorTextDistance"
+                    android:textSize="@dimen/text_row_rouble_java"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin_2dp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

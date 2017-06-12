@@ -1,0 +1,150 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:orientation="vertical"
+                                                 tools:context="com.sdv.fuelbuddy.activity.map.MapsActivity"
+                                                 tools:layout="@layout/activity_maps">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/activity_maps" />
+
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_bottom_sheet_hight"
+        app:behavior_peekHeight="@dimen/size_bottom_sheet_peek_hight"
+        app:layout_behavior="@string/view_pager_bottom_sheet_behavior">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/label" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_64dp_recyclerViewTopMargin"
+            android:background="@color/colorRecyclerViewBgn" />
+
+        <android.support.design.widget.TabLayout
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_tab_layout_hight"
+            android:layout_marginTop="@dimen/margin_20dp_tab_layout_top"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabIndicatorHeight="@dimen/zero_dp"
+            app:tabPaddingBottom="@dimen/padding_tab_layout"
+            app:tabSelectedTextColor="@color/colorTabSelectedText"
+            app:tabTextColor="@color/сolorTabText"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/tab_arrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_tab_arrow" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_toolbar_height"
+        android:background="@drawable/bck_action_bar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_first_row_toolber_height">
+
+            <ImageView
+                android:id="@+id/imageViewMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:background="@drawable/ic_man_selector"
+                android:layout_marginLeft="@dimen/margin_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/app_toolBar_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_toolBarTitle"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:background="@drawable/ic_gear_selector"
+                android:layout_marginRight="@dimen/margin_10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@drawable/search_bgn"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewMarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:background="@drawable/ic_marker_selector"
+                android:layout_marginLeft="@dimen/margin_10dp"/>
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/gas_search_hint_text"
+                android:textStyle="italic"
+                android:layout_marginLeft="@dimen/margin_10dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:background="@drawable/ic_plus_selector"
+                android:layout_marginRight="@dimen/margin_10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

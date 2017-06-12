@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FuelBuddy</string>
+    <string name="app_toolBar_title">Fuel Buddy</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="by_distance">По расстоянию</string>
+    <string name="by_cost">По стоимости</string>
+    <string name="symbol_ruble_Java">\u20BD</string>
+    <string name="google__play_service_error">Нет соединения с google play service</string>
+    <string name="google_play_service_available">Google Play Services доступно</string>
+    <string name="csv_file_name">zapravki.csv</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_terrain">Terrain</string>
+    <string name="map_type_satellite">Sattelite</string>
+    <string name="map_type_hybrid">Hybrid</string>
+    <string name="gas_search_hint_text">Поиск заправки</string>
+    <string name="text_test_address">просп. Тараса шевченко 34</string>
+    <string name="text_test_price">34.4</string>
+    <string name="text_test_hours">hour ago</string>
+    <string name="text_test_name">Автозаправка Shell</string>
+    <string name="text_test_distance">1,3</string>
+    <string name="text_km">км</string>
+    <string name="min_required_sdk">Минимально требуемая версия SDK is 4.4 KITKAT</string>
+    <string name="gas_data_source_error">Gas station data source error</string>
+    <string name="action_clicke_profile">Профиль</string>
+    <string name="action_clicke_settings">Настройки</string>
+    <string name="action_clicke_location">Найти заправку на карте</string>
+    <string name="action_clicke_add_location">Добавить заправку</string>
+    <string name="moscow">Москва</string>
+    <string name="another_region">Информация по заправкам доступна только по г. Москва</string>
+    <string name="fragment_attach_error">Ошибка получения MapsActivity в onAttach()</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+    <string name="error_invalid_email">Email не корректный</string>
+    <string name="error_invalid_password">Пароль очень короткий</string>
+    <string name="error_incorrect_password_too">Пароли не совпадают</string>
+    <string name="error_field_required">Это поле обязательное</string>
+
+
+</resources>
