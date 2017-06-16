@@ -90,6 +90,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Введите e-mail"
+                        android:imeOptions="actionNext"
                         android:inputType="textEmailAddress"
                         android:textColorHint="#4c000000"
                         android:layout_marginTop="10dp"/>
@@ -98,6 +99,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Введите пароль"
+                        android:imeOptions="actionDone"
                         android:inputType="textPassword"
                         android:textColorHint="#4c000000"
                         android:layout_marginTop="10dp"/>

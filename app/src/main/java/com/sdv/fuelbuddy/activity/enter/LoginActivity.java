@@ -32,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
         setContentView(R.layout.activity_login);
 
         tvReg = (TextView) findViewById(R.id.tv_reg);
@@ -43,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mAuth = FirebaseAuth.getInstance();
 
         emailView = (EditText) findViewById(R.id.email);
         passView = (EditText) findViewById(R.id.pass);
@@ -55,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                myProgressBar.setVisibility(View.VISIBLE);
                     signIn(emailView.getText().toString(), passView.getText().toString());
             }
         });
@@ -101,6 +103,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             startActivity(new Intent(LoginActivity.this, MapsActivity.class));
+                            finish();
 
                         }
                         if (!task.isSuccessful()) {
